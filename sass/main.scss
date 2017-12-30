@@ -1,8 +1,14 @@
-@import "base/base";
 @import "mixin/mixin";
+@import "base/base";
+@import "grid/grid";
+
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: $franklin,$arial, sans-serif;
-    background-color: gainsboro;
+    // background-color: gainsboro;
+    box-sizing: content-box;
 }
 .container{
     // max-width: 90vw;
@@ -12,6 +18,27 @@ body {
 
     h1{
         font-family: $fontBungee;
-        font-size: ms(2);
+        // font-size: ms(2);
+    }
+
+    &-grid{
+        max-width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: stretch;
+        flex-flow: wrap row;
+
+        $flexwidth: 100%;
+        $flexitem: 3;
+        $flexgutter: 1%;
+        $flexcalc: (($flexwidth / $flexitem) - ($flexgutter * $flexitem));
+        .col{
+            @include bckg;
+            flex:1 1 $flexcalc;
+            margin: $flexgutter;
+            color: black;
+            
+        } 
     }
 }

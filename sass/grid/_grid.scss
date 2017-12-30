@@ -1,0 +1,18 @@
+// @import "../../node_modules/bootstrap/scss/bootstrap-grid";
+// @import "../../node_modules/bootstrap/scss/functions";
+// @import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "mediaqueries";
+body {
+    background-color: rgba(#3ee4c4, 0.75);
+    @include respond-to($phone) {
+        background-color: rgba(#2ecc71, 0.75);
+    }
+    @include respond-to($tablet-portrait) {
+        background-color: rgba(#c43ee4, 0.75);
+    }
+    @include respond-to($tablet-landscape) {
+        background-color: lighten(rgba(#e43e5e, 0.75), 20%);
+    }
+}
