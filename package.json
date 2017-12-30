@@ -20,6 +20,7 @@
     "modularscale-sass": "^3.0.4"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
     "bourbon": "^4.3.4",
     "bourbon-neat": "^1.9.0"
   },
