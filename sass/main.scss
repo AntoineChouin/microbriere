@@ -1,0 +1,16 @@
+@import "base/base";
+@import "mixin/mixin";
+body {
+    font-family: $franklin,$arial, sans-serif;
+    background-color: gainsboro;
+}
+.container{
+    // max-width: 90vw;
+    width: 90%;
+    color: peru;
+    margin: 0 auto;
+
+    h1{
+        font-family: $fontBungee;
+    }
+}
