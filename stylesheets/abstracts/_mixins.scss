@@ -82,3 +82,12 @@
  
   background: transparentize($color-fluid, 0.55);
 }
+
+
+@mixin bckg {
+   @for $i from 1 through length($colorsinback) {
+      &:nth-child(#{length($colorsinback)}n + #{$i}) {
+         background: lighten(nth($colorsinback, $i), 20%);
+      }
+   }
+}

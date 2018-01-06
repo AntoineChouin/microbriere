@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AntoineChouin/microbriere#readme",
   "dependencies": {
+    "holderjs": "^2.9.4",
     "include-media": "^1.4.9",
     "jquery": "^3.2.1",
     "modernizr": "^3.5.0",

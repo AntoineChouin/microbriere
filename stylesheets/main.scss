@@ -21,11 +21,14 @@ h2 {
  
   // font-size: ms(5);
   color: royalblue;
+  font-family: $code-font-stack;
   @include media("≥phone", "≤tablet") {
     line-height: 1.5;
     color: mediumvioletred;
+    
   }
 }
+
 
 p {
   font-family: "Franklin Gothic Medium", Arial, sans-serif;
@@ -41,12 +44,15 @@ p {
     justify-content: space-around;
     flex-flow: row wrap;
     
-    .grid-item {
-      @include flexfix;
-      flex: 1 0 48%;
-      margin: 2% 1%;
-    }
+    
   }
- 
+ .grid-item {
+      @include flexfix;
+      flex: 1 1 48%;
+      margin: 2% 1%;
+//      background-color: #e7e731;
+   @include bckg;
+   border: #3131e7 1px solid;
+    } 
 
 }

@@ -490,6 +490,7 @@ a:hover, a:active, a:focus {
 
 h2 {
   color: royalblue;
+  font-family: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -540,15 +541,43 @@ p {
   flex-flow: row wrap;
 }
 
-.wrapper-grid .grid-item {
+.wrapper .grid-item {
   border: 1px solid blue;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 48%;
+  flex: 1 1 48%;
   margin: 2% 1%;
+  border: #3131e7 1px solid;
 }
 
-.wrapper-grid .grid-item:before, .wrapper-grid .grid-item:after {
+.wrapper .grid-item:before, .wrapper .grid-item:after {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
+}
+
+.wrapper .grid-item:nth-child(6n + 1) {
+  background: #f28c8c;
+}
+
+.wrapper .grid-item:nth-child(6n + 2) {
+  background: #f2bf8c;
+}
+
+.wrapper .grid-item:nth-child(6n + 3) {
+  background: #f2f28c;
+}
+
+.wrapper .grid-item:nth-child(6n + 4) {
+  background: #bff28c;
+}
+
+.wrapper .grid-item:nth-child(6n + 5) {
+  background: #8cbff2;
+}
+
+.wrapper .grid-item:nth-child(6n + 6) {
+  background: #f28cbf;
 }

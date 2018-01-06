@@ -12,62 +12,35 @@
 
 <body>
     <div class="wrapper">
-       <header class="wrapper-header">
+        <header class="wrapper-header">
             <h2>This is a test</h2>
-       </header>
-       
-        
-     <section class="wrapper-grid">
-       <article class="grid-item post">
-           <header class="grid-item_header">
-               <h3>Lorem ipsum dolor sit amet, consectetur.</h3>
-           </header>
-           <div class="grid-item_info">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.</p>
-               <p>Voluptatum consequuntur deleniti rerum dolorem quaerat distinctio asperiores optio nam cumque, quas temporibus quidem quos. Rem, fugiat. Cumque eum, veritatis magnam cupiditate ipsam placeat aspernatur.</p>
-               <p>Molestiae aut vel debitis, sit nulla quas, laborum itaque? Praesentium molestiae quisquam, nemo magnam fugiat, doloribus recusandae deleniti accusantium natus incidunt dolore, iste mollitia rerum?</p>
-               <p>Nostrum ea tempore accusamus esse asperiores corporis a ex sed adipisci, incidunt quibusdam, tempora voluptas iure, iusto illum excepturi nam! Soluta nulla nemo laboriosam esse?</p>
-           </div>
-       </article>
-       <article class="grid-item post">
-           <header class="grid-item_header">
-               <h3>Ad quas eum beatae deserunt aliquid?</h3>
-           </header>
-           <div class="grid-item_info">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, ratione possimus quos quas ipsam tempora quia repellendus corporis eum! Omnis, dolor, ea. Earum, iusto, ratione!</p>
-               <p>Quam quae alias, eius iusto officia tempora ducimus perferendis similique. Accusamus repellat cumque omnis quisquam optio. Officia eum praesentium aliquam, minima nobis porro quaerat laboriosam.</p>
-               <p>Molestiae fugit quasi vero delectus, ullam earum error omnis aliquam velit, veritatis maxime modi magnam, nemo impedit aspernatur ipsam eligendi assumenda voluptas laboriosam sed deserunt!</p>
-               <p>Sequi libero temporibus illo consequuntur delectus iure ipsa ducimus quo incidunt! Quia eos soluta at incidunt, voluptatibus illum dolorem provident quo laudantium quos, quisquam amet.</p>
-           </div>
-       </article>
-       <article class="grid-item post">
-           <header class="grid-item_header">
-               <h3>Tempore iure, inventore nisi mollitia aperiam.</h3>
-           </header>
-           <div class="grid-item_info">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quasi reprehenderit magnam, nulla at quis ducimus ullam minima maxime distinctio consequatur voluptas neque exercitationem excepturi.</p>
-               <p>Tempore eligendi magni eius quo deserunt, aliquid doloremque beatae eveniet esse perferendis porro ipsam temporibus mollitia ratione vero id. Distinctio dignissimos, dicta iste iusto. Mollitia.</p>
-               <p>Eius quaerat quibusdam aliquam adipisci dolore exercitationem commodi distinctio beatae quo consectetur doloremque eveniet, quam repellat dolores ea laudantium consequuntur, repellendus numquam deleniti magni rerum.</p>
-               <p>Nemo ratione dolor, maiores id laborum adipisci libero ullam corrupti nihil deserunt, porro magni, laudantium neque ex dolores facere fugiat architecto maxime dolorem pariatur quos?</p>
-           </div>
-       </article>
-       <article class="grid-item post">
-           <header class="grid-item_header">
-               <h3>Ratione perspiciatis molestiae fuga impedit officia.</h3>
-           </header>
-           <div class="grid-item_info">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non asperiores, tenetur numquam, libero dolores nam facilis nemo sit, deleniti eligendi, autem quos vel perferendis!</p>
-               <p>Incidunt, ullam soluta cumque, mollitia illum commodi voluptatem quidem cum corporis aliquam quia, nisi sed obcaecati. Ipsam, ratione. Dignissimos cumque, odio aliquid error repellendus ad!</p>
-               <p>Eveniet libero autem temporibus laboriosam, totam adipisci aperiam doloremque ad sunt numquam provident ipsam quas aliquam quo voluptatum facilis fugit reiciendis quis minus, debitis dolores.</p>
-               <p>Corporis quidem ullam nostrum, facere dicta optio tenetur? Itaque amet id magnam adipisci, quibusdam magni totam, esse velit nihil doloremque dicta similique nostrum eius quod.</p>
-           </div>
-       </article>
-     </section>
+        </header>
+
+
+        <section class="wrapper-grid" id="app-4">
+            <article class="grid-item post" v-for="todo in todos">
+                 <header class="post-header grid-item_header">
+                    <h3>
+                        {{ todo.title }}
+                    </h3>
+                </header>
+                <div class="post-info grid-item_info">
+                    <p>{{ todo.text }}</p>
+                    <p>{{ todo.text }}</p>
+                    <p>{{ todo.text }}</p>
+                </div>
+                 <aside class="post-logo grid-item_aside">
+                     <img src="holder.js/100px200?random=yes" alt="">
+                 </aside>
+            </article>
+            
+        </section>
 
 
     </div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/holderjs/holder.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
