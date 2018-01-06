@@ -6,19 +6,26 @@ var app4 = new Vue({
     todos: [
       {
         title: 'Build something awesome',
-        textTitle: 'Legendary',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.'
+        descriptif: {
+          textTitle: 'Legendary',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.'
+        }
       },
       {
         title: 'Sass',
-        textTitle: 'ambiance',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.'
+        descriptif: {
+          textTitle: 'Legendary',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.'
+        }
       },
-//      {
-//        title: 'Build something awesome',
-//        textTitle: 'Legendary',
-//        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.'
-//      },
+      {
+        title: 'Build something awesome',
+        descriptif: {
+          textTitle: 'Legendary',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.'
+        }
+
+      },
 //      {
 //        title: 'Build Meteojs',
 //        textTitle: 'Like Zendor, the Wizard',
