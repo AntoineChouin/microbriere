@@ -16,9 +16,9 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 
 
-$colorsinback: #e73131, #e78c31, #e7e731, #8ce731, #318ce7, #e7318c;
+$colorsinback: #e73131, #e78c31, #e7e731, #8ce731, #1566b6, #e7318c;
 
-
+$colorbody: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c;
 /// Copy text color
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
@@ -63,8 +63,11 @@ $breakpoints: (
 ) !default;
 
 
-
-
+////Grid-items
+ $flex-width: 100%;
+  $flex-column: 2;
+  $flex-margin: 1%;
+  $flex-calc: ($flex-width/$flex-column) - ($flex-column*$flex-margin);
 
 
 /// Relative or absolute URL where all assets are served from

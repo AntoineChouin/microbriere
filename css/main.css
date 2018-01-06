@@ -484,6 +484,10 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
 }
 
+p {
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
+}
+
 .biere {
   color: cornflowerblue;
 }
@@ -498,10 +502,6 @@ h2 {
     line-height: 1.5;
     color: mediumvioletred;
   }
-}
-
-p {
-  font-family: "Franklin Gothic Medium", Arial, sans-serif;
 }
 
 .wrapper {
@@ -541,7 +541,7 @@ p {
   flex-flow: row wrap;
 }
 
-.wrapper .grid-item {
+.grid-item {
   border: 1px solid blue;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 48%;
@@ -550,7 +550,7 @@ p {
   border: #3131e7 1px solid;
 }
 
-.wrapper .grid-item:before, .wrapper .grid-item:after {
+.grid-item:before, .grid-item:after {
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   -webkit-box-ordinal-group: 2;
@@ -558,26 +558,30 @@ p {
   order: 1;
 }
 
-.wrapper .grid-item:nth-child(6n + 1) {
-  background: #f28c8c;
+.grid-item:nth-child(7n + 1) {
+  background: #291fbf;
 }
 
-.wrapper .grid-item:nth-child(6n + 2) {
-  background: #f2bf8c;
+.grid-item:nth-child(7n + 2) {
+  background: #b5bf1f;
 }
 
-.wrapper .grid-item:nth-child(6n + 3) {
-  background: #f2f28c;
+.grid-item:nth-child(7n + 3) {
+  background: #1f66bf;
 }
 
-.wrapper .grid-item:nth-child(6n + 4) {
-  background: #bff28c;
+.grid-item:nth-child(7n + 4) {
+  background: #781fbf;
 }
 
-.wrapper .grid-item:nth-child(6n + 5) {
-  background: #8cbff2;
+.grid-item:nth-child(7n + 5) {
+  background: #66bf1f;
 }
 
-.wrapper .grid-item:nth-child(6n + 6) {
-  background: #f28cbf;
+.grid-item:nth-child(7n + 6) {
+  background: #bf781f;
+}
+
+.grid-item:nth-child(7n + 7) {
+  background: #bf291f;
 }

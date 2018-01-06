@@ -84,10 +84,10 @@
 }
 
 
-@mixin bckg {
-   @for $i from 1 through length($colorsinback) {
-      &:nth-child(#{length($colorsinback)}n + #{$i}) {
-         background: lighten(nth($colorsinback, $i), 20%);
+@mixin bckg($color) {
+   @for $i from 1 through length($color) {
+      &:nth-child(#{length($color)}n + #{$i}) {
+         background: lighten(nth($color, $i), 35%);
       }
    }
 }

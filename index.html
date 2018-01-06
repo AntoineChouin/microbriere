@@ -19,21 +19,27 @@
 
         <section class="wrapper-grid" id="app-4">
             <article class="grid-item post" v-for="todo in todos">
-                 <header class="post-header grid-item_header">
+                <header class="post-header grid-item_header">
                     <h3>
                         {{ todo.title }}
                     </h3>
                 </header>
-                <div class="post-info grid-item_info">
+                <div class="post-info grid-item_info list-group">
+                    <div class="list-group_item">
+                        <h4>{{todo.textTitle}}</h4>
+                         <p>{{ todo.text }}</p>
+                    </div>
+<!--
                     <p>{{ todo.text }}</p>
                     <p>{{ todo.text }}</p>
                     <p>{{ todo.text }}</p>
+-->
                 </div>
-                 <aside class="post-logo grid-item_aside">
-                     <img src="holder.js/100px200?random=yes" alt="">
-                 </aside>
+                <aside class="post-logo grid-item_aside">
+                    <img src="holder.js/100px200?random=yes" alt="">
+                </aside>
             </article>
-            
+
         </section>
 
 
