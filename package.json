@@ -1,0 +1,25 @@
+{
+  "name": "micro",
+  "version": "1.0.0",
+  "description": "microbrasserie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntoineChouin/microbriere.git"
+  },
+  "author": "Antoine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AntoineChouin/microbriere/issues"
+  },
+  "homepage": "https://github.com/AntoineChouin/microbriere#readme",
+  "dependencies": {
+    "include-media": "^1.4.9",
+    "jquery": "^3.2.1",
+    "modernizr": "^3.5.0",
+    "vue": "^2.5.13"
+  }
+}
