@@ -559,29 +559,75 @@ h2 {
 }
 
 .grid-item:nth-child(7n + 1) {
-  background: #291fbf;
+  background: #3e34dd;
+  color: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c !important;
 }
 
 .grid-item:nth-child(7n + 2) {
-  background: #b5bf1f;
+  background: #d4dd34;
+  color: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c !important;
 }
 
 .grid-item:nth-child(7n + 3) {
-  background: #1f66bf;
+  background: #3480dd;
+  color: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c !important;
 }
 
 .grid-item:nth-child(7n + 4) {
-  background: #781fbf;
+  background: #9334dd;
+  color: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c !important;
 }
 
 .grid-item:nth-child(7n + 5) {
-  background: #66bf1f;
+  background: #80dd34;
+  color: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c !important;
 }
 
 .grid-item:nth-child(7n + 6) {
-  background: #bf781f;
+  background: #dd9334;
+  color: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c !important;
 }
 
 .grid-item:nth-child(7n + 7) {
-  background: #bf291f;
+  background: #dd3e34;
+  color: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c !important;
+}
+
+.list-group {
+  border: 2px solid white;
+}
+
+.list-group .list-group_item:nth-child(7n + 1) {
+  background: #cc777a;
+  color: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3 !important;
+}
+
+.list-group .list-group_item:nth-child(7n + 2) {
+  background: #77cc9d;
+  color: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3 !important;
+}
+
+.list-group .list-group_item:nth-child(7n + 3) {
+  background: #77a5cc;
+  color: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3 !important;
+}
+
+.list-group .list-group_item:nth-child(7n + 4) {
+  background: #cc77a5;
+  color: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3 !important;
+}
+
+.list-group .list-group_item:nth-child(7n + 5) {
+  background: #ccc877;
+  color: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3 !important;
+}
+
+.list-group .list-group_item:nth-child(7n + 6) {
+  background: #cc9d77;
+  color: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3 !important;
+}
+
+.list-group .list-group_item:nth-child(7n + 7) {
+  background: #c877cc;
+  color: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3 !important;
 }
