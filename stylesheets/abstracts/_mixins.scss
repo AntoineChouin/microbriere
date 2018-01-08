@@ -92,3 +92,9 @@
       }
    }
 }
+
+@mixin gridflex ($query){
+  flex: 1 0 ( (gridflex($query, flex-width)) / (gridflex($query, flex-column)) - ( (gridflex($query, flex-margin)) * (gridflex($query, flex-column))) ) ;
+  margin: (gridflex($query, flex-margin));
+
+}

@@ -43,12 +43,13 @@ h2 {
 //  $flex-calc: ($flex-width/$flex-column) - ($flex-column*$flex-margin);
 .grid-item {
   @include flexfix;
-//  flex: 1 1 $flex-calc;
-//  flex: 1 1 map-get(map-get($grid-flex, primary), base);
-//  width: $flex;
-  @include gridflex(primary);
 
-  margin: ($flex-margin * 2) $flex-margin;
+    flex-grow: 1;
+    flex-shrink: 1;
+//    flex-basis: gridflex(primary, basis);
+//  flex: 1 1 gridflex(primary, basis);
+//  margin: ($flex-margin * 2) $flex-margin;
+  @include gridflex(primary);
   @include bckg($colorbody);
   border: #3131e7 1px solid;
 }
@@ -58,11 +59,13 @@ h2 {
  
   & &_item {
     @include bckg($vertdegris);
-    
-    width: 99%;
-    margin: 2% auto;
-    display: flex;
-    justify-content: space-between;
+//    flex-grow: 0;
+//    flex-shrink: 1;
+//    flex-basis: gridflex(primary, basis);
+////    width: 99%;
+//    margin: gridflex(primary, flex-margin) auto;
+//    display: flex;
+//    justify-content: space-between;
     h4 {
 //      border: 1px solid white;
       @include flexfix;

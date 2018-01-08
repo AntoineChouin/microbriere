@@ -72,21 +72,20 @@ $grid-flex: (
   
   primary: (
     flex-width: 100%,
-    flex-column: 3,
-    flex-margin: 1%,
-    basis: ((flex-width / flex-column) - (flex-column * flex-margin))
+    flex-column: 4,
+    flex-margin: 1.25%,
   ),
-  
+//  basis: ((flex-width / flex-column) - (flex-column * flex-margin)),
   mobile: (
     flex-width: 100%,
     flex-column: 1,
     flex-margin: 0.1%,
-    basis: ((flex-width / flex-column) - (flex-column * flex-margin))
+
   )
 
 
 );
-
+//color(primary, base);
 //$flex: map-get(map-get($grid-flex, primary), flex-width);
 //$flex: gridflex(primary, flex-width);
 //@function gridflex($color-name, $color-variant) {
@@ -94,28 +93,11 @@ $grid-flex: (
 //  @return map-get(map-get($colors, $color-name), $color-variant);
 //}
 
-
-
-@mixin gridflex ($query){
-  
- @function color($color-name, $color-variant) {
+ @function gridflex($color-name, $color-variant) {
   // map inception
-  @return map-get(map-get($colors, $color-name), $color-variant);
-}
-    $flex-width: gridflex($query, flex-width);
-    $flex-column:  gridflex($query, flex-column);
-    $flex-margin: gridflex($query, flex-margin);
-    $flex-calc: ( $flex-width / $flex-column) - ( $flex-column * $flex-margin );
-  $flex: 1 1 $flex-calc;
+  @return map-get(map-get($grid-flex, $color-name), $color-variant);
 }
 
-//  $flex-calc: (($flex-width/$flex-column) - ($flex-column*$flex-margin));
-
-// $flex-width: 100%;
-//  $flex-column: 3;
-//  $flex-margin: 1%;
-//  $flex-calc: ($flex-width/$flex-column) - ($flex-column*$flex-margin);
-//
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
