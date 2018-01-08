@@ -555,4 +555,8 @@ h2 {
   .grid-item:nth-child(7n + 7) {
     background: #ec918c; }
 
+/* line 64, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+.list-group {
+  border: 2px solid white; }
+
 /*# sourceMappingURL=main.css.map */
