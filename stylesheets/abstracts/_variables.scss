@@ -19,7 +19,7 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 $colorsinback: #e73131, #e78c31, #e7e731, #8ce731, #1566b6, #e7318c;
 
 $colorbody: #241ca9, #a1a91c, #1c5ba9, #6b1ca9, #5ba91c, #a96b1c, #a9241c;
-$vertdegris: #b34348, #43b376, #4380b3, #b34380, #b3ae43, #b37643, #ae43b3; 
+$vertdegris: #b34348, #43b376, #4380b3, #b34380,#ae43b3, #b3ae43, #b37643; 
 /// Copy text color
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
@@ -64,12 +64,58 @@ $breakpoints: (
 ) !default;
 
 
-////Grid-items
- $flex-width: 100%;
-  $flex-column: 2;
-  $flex-margin: 1%;
-  $flex-calc: ($flex-width/$flex-column) - ($flex-column*$flex-margin);
+////Grid-items-flex
 
+$grid-flex: (
+  
+//  flex-unested: 1,
+  
+  primary: (
+    flex-width: 100%,
+    flex-column: 3,
+    flex-margin: 1%,
+    basis: ((flex-width / flex-column) - (flex-column * flex-margin))
+  ),
+  
+  mobile: (
+    flex-width: 100%,
+    flex-column: 1,
+    flex-margin: 0.1%,
+    basis: ((flex-width / flex-column) - (flex-column * flex-margin))
+  )
+
+
+);
+
+//$flex: map-get(map-get($grid-flex, primary), flex-width);
+//$flex: gridflex(primary, flex-width);
+//@function gridflex($color-name, $color-variant) {
+//  // map inception
+//  @return map-get(map-get($colors, $color-name), $color-variant);
+//}
+
+
+
+@mixin gridflex ($query){
+  
+ @function color($color-name, $color-variant) {
+  // map inception
+  @return map-get(map-get($colors, $color-name), $color-variant);
+}
+    $flex-width: gridflex($query, flex-width);
+    $flex-column:  gridflex($query, flex-column);
+    $flex-margin: gridflex($query, flex-margin);
+    $flex-calc: ( $flex-width / $flex-column) - ( $flex-column * $flex-margin );
+  $flex: 1 1 $flex-calc;
+}
+
+//  $flex-calc: (($flex-width/$flex-column) - ($flex-column*$flex-margin));
+
+// $flex-width: 100%;
+//  $flex-column: 3;
+//  $flex-margin: 1%;
+//  $flex-calc: ($flex-width/$flex-column) - ($flex-column*$flex-margin);
+//
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

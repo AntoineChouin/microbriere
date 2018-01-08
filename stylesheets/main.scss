@@ -17,34 +17,24 @@
 $breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px);
 //8. autre
 h2 {
-
   // font-size: ms(5);
   color: royalblue;
   font-family: $code-font-stack;
   @include media("≥phone", "≤tablet") {
     line-height: 1.5;
     color: mediumvioletred;
-
   }
 }
-
-
 
 .wrapper {
   @include container-fluid;
   font-size: ms(1);
   color: $text-color !important;
-
   &-grid {
-
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
-
-
   }
-
-
 }
 
 //  $flex-width: 100%;
@@ -53,18 +43,42 @@ h2 {
 //  $flex-calc: ($flex-width/$flex-column) - ($flex-column*$flex-margin);
 .grid-item {
   @include flexfix;
-  flex: 1 1 $flex-calc;
+//  flex: 1 1 $flex-calc;
+//  flex: 1 1 map-get(map-get($grid-flex, primary), base);
+//  width: $flex;
+  @include gridflex(primary);
+
   margin: ($flex-margin * 2) $flex-margin;
-  //      background-color: #e7e731;
   @include bckg($colorbody);
   border: #3131e7 1px solid;
 }
 
 .list-group {
-  
-  .list-group_item{
-     @include bckg($vertdegris);
+
+ 
+  & &_item {
+    @include bckg($vertdegris);
+    
+    width: 99%;
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-between;
+    h4 {
+//      border: 1px solid white;
+      @include flexfix;
+      &::first-letter{
+        
+      }
+      text-transform: capitalize;
+      &:after {
+        content: ' : ';
+        width: 10px;
+        @include flexfix;
+        //        margin-left: 0.25rem;
+      }
+    }
+    p {
+//      border: 1px solid white;
+    }
   }
-//   @include bckg($vertdegris);
-  border: 2px solid white;
 }

@@ -57,7 +57,7 @@
     flex-basis: 0;
     order: 1;
   }
-  border: 1px solid blue;
+  
 }
 
 @mixin wrapper {
@@ -73,13 +73,13 @@
   $color-fixed: #e78c31;
   background-color: transparentize($color-fixed, 0.5);
 }
- $color-fluid: #318ce7;
-//  $fluid-light: lighten($fluid-light, 25%);
+
+
 
 @mixin container-fluid {
+   $color-fluid: #318ce7;
   @include wrapper;
   width: 100%;
- 
   background: transparentize($color-fluid, 0.55);
 }
 
@@ -87,8 +87,8 @@
 @mixin bckg($color) {
    @for $i from 1 through length($color) {
       &:nth-child(#{length($color)}n + #{$i}) {
-         background: lighten(nth($color, $i), 15%);
-        color: $color !important;
+         background: lighten(nth($color, $i), 25%);
+        
       }
    }
 }
