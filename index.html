@@ -14,61 +14,87 @@
             <h2>This is a test</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ex nesciunt reprehenderit dolor ad suscipit alias, velit quis voluptatibus repellendus, aliquam voluptates, culpa deserunt sint, soluta placeat minima dolorum! Quod.</p>
         </header>
-        <section class="wrapper-grid" id="app-4">
+        <section class="wrapper-grid wrapper-post" id="app-4">
             <!--            <article class="grid-item post" v-for="todo in todos">-->
             <article class="grid-item post" v-for="todo in todos">
-                <header class="post-header grid-item_header">
+                <header class="grid-item_header post-header">
                     <h3>
                         {{ todo.title.principale }}
                     </h3>
                     <p> {{ todo.title.secondaire }}</p>
                 </header>
-                
-                <section class="post-descriptif grid-item_descriptif">
-                    <p>{{ todo.info.textI }}</p>
-                    <p>{{ todo.info.textII }}</p>
-                </section>
-                
-                <section class="post-info grid-item_info list-group">
-                    <div class="post-info list-group_item">
-                        <h4>
-                            <span> amertume </span>
-                        </h4>
-                        <p>{{ todo.descriptif.amertume }}</p>
-                    </div>
 
-                    
-                   <div class="post-info list-group_item">
-                        <h4><span> style </span></h4>
-                        <p>{{ todo.descriptif.style }}</p>
-                    </div>
-                   
+                <div class="grid-item_flexed">
 
-                    
-                   <div class="post-info list-group_item">
-                        <h4><span> Taux d'alcool %</span></h4>
-                        <p>{{ todo.descriptif.alcool }}</p>
-                    </div>
+                    <section class="post-info ">
+                        <p>{{ todo.info.textI }}</p>
+                        <p>{{ todo.info.textII }}</p>
+                    </section>
 
-                    
-                   <div class="post-info list-group_item">
-                        <h4><span>Verre</span></h4>
-                        <p>{{ todo.descriptif.verre }}</p>
-                    </div>
-                    
-                   <div class="post-info list-group_item">
-                        <h4><span>veillessement</span></h4>
-                        <p>{{ todo.descriptif.veillessement }}</p>
-                    </div>
-                   
+                    <section class="post-description list-group ">
 
-                </section>
-                
-                <aside class="post-logo grid-item_aside">
-                 <img src="holder.js/100px200?random=yes" alt="">
-                </aside>
+                        <div class="list-group_item">
+                            <h4>
+                                <span> amertume </span>
+                            </h4>
+                            <p>{{ todo.descriptif.amertume }}</p>
+                        </div>
+
+                        <div class="list-group_item">
+                            <h4><span> style </span></h4>
+                            <p>{{ todo.descriptif.style }}</p>
+                        </div>
+
+                         <div class="list-group_item">
+                            <h4><span> Taux d'alcool (%)</span></h4>
+                            <p>{{ todo.descriptif.alcool }}</p>
+                        </div>
+
+                         <div class="list-group_item">
+                            <h4><span>Verre</span></h4>
+                            <p>{{ todo.descriptif.verre }}</p>
+                        </div>
+
+                         <div class="list-group_item">
+                            <h4><span>veillessement</span></h4>
+                            <p>{{ todo.descriptif.veillessement }}</p>
+                        </div>
+
+                    </section>
+
+                    <aside class="post-logo">
+                        <img src="https://journalmetrocom.files.wordpress.com/2016/11/dsc_2286.jpg" alt="Image Bouteille">
+                    </aside>
+                </div>
             </article>
         </section>
+
+        <footer class="wrapper-footer">
+            <ul class="list-group">
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Facilis repellendus, minima mollitia.</li>
+                <li>Aliquid pariatur, nihil ducimus.</li>
+                <li>Laudantium eius quae rerum.</li>
+            </ul>
+            <ul class="list-group">
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Quod doloremque autem quis.</li>
+                <li>Aut, ut distinctio eveniet.</li>
+                <li>Quasi necessitatibus quidem odio.</li>
+            </ul>
+            <ul class="list-group">
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Omnis quidem assumenda nulla?</li>
+                <li>Minima doloremque, ut ea.</li>
+                <li>Temporibus quod saepe, corporis!</li>
+            </ul>
+            <ul class="list-group">
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Consequuntur temporibus, eos delectus.</li>
+                <li>Porro nemo hic dignissimos.</li>
+                <li>Nulla quidem alias excepturi.</li>
+            </ul>
+        </footer>
     </div>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/vue/dist/vue.js"></script>

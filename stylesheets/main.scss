@@ -32,56 +32,108 @@ h2 {
   color: $text-color !important;
   &-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-flow: row wrap;
+  }
+  &-footer {
+    display: flex;
   }
 }
 
-//  $flex-width: 100%;
-//  $flex-column: 2;
-//  $flex-margin: 1%;
-//  $flex-calc: ($flex-width/$flex-column) - ($flex-column*$flex-margin);
+//    @include gridflex(primary);
 .grid-item {
   @include flexfix;
+  align-self: stretch;
+  margin: 2em 1%;
+  border: 0.1em solid black;
 
-    flex-grow: 1;
-    flex-shrink: 1;
-//    flex-basis: gridflex(primary, basis);
-//  flex: 1 1 gridflex(primary, basis);
-//  margin: ($flex-margin * 2) $flex-margin;
-  @include gridflex(primary);
-  @include bckg($colorbody);
-  border: #3131e7 1px solid;
+
+  & &_header {
+    @include flexfix;
+    flex: 1 1 100%;
+    padding: 2% 0; //    align-self: center;
+  }
+
+
+
+  & &_flexed {
+    @include flexfix; //    @include bckg($vertdegris);
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap row;
+    align-items: flex-start;
+    border: 1px solid black;
+    .post-info {
+      @include gridflex(primary);
+      @include flexfix;
+      font-family: $text-font-stack;
+      font-size: ms(0); //      height: 100px;
+    }
+    .post-description {
+      @include flexfix;
+      @include gridflex(primary);
+    }
+    .post-logo {
+      @include flexfix;
+      @include gridflex(primary);
+
+    }
+
+  }
+
+
+}
+
+.post {
+  @include bckg($vertdegris);
+  & &-header {
+    margin: 0 0 1em 0;
+
+    background-color: map-get($vertgrise, brun);
+  }
+  & &-logo {
+
+    background-color: map-get($vertgrise, rosegris);
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  & &-description {
+    //    background-color: color(sexy);
+    //    color: mediumvioletred;
+  }
+
 }
 
 .list-group {
-
- 
+  display: flex;
+  flex-flow: wrap column;
+  padding-left: 0;
+  margin: 0;
+  border: 5px solid white; //  display: inline-block;
   & &_item {
-    @include bckg($vertdegris);
-//    flex-grow: 0;
-//    flex-shrink: 1;
-//    flex-basis: gridflex(primary, basis);
-////    width: 99%;
-//    margin: gridflex(primary, flex-margin) auto;
-//    display: flex;
-//    justify-content: space-between;
-    h4 {
-//      border: 1px solid white;
-      @include flexfix;
-      &::first-letter{
-        
-      }
-      text-transform: capitalize;
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    width: 100%;
+    color: #495057;
+    text-align: inherit;
+    align-self: stretch;
+
+    h3 {
+      border: 1px solid white;
+      text-transform: uppercase;
       &:after {
         content: ' : ';
         width: 10px;
-        @include flexfix;
-        //        margin-left: 0.25rem;
+
       }
     }
-    p {
-//      border: 1px solid white;
-    }
+
   }
 }

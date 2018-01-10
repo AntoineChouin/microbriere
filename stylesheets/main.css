@@ -498,7 +498,6 @@ h2 {
 
 /* line 29, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
 .wrapper {
-  display: flow-root;
   /* For IE 6/7 (trigger hasLayout) */
   margin: 0 auto;
   max-width: 100vw;
@@ -507,97 +506,161 @@ h2 {
   background: rgba(49, 140, 231, 0.45);
   font-size: 1.5em;
   color: #222222 !important; }
-  /* line 38, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+  /* line 37, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+  .wrapper * {
+    margin: 0;
+    padding: 0; }
+  /* line 41, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
   .wrapper:before, .wrapper:after {
     content: "";
     display: table; }
-  /* line 44, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+  /* line 46, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
   .wrapper:after {
     clear: both; }
-  /* line 49, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+  /* line 50, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
   .wrapper.ie {
     *zoom: 1; }
   /* line 33, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
   .wrapper-grid {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-flow: row wrap; }
+  /* line 39, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+  .wrapper-footer {
+    display: flex; }
 
-/* line 44, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+/* line 45, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
 .grid-item {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex: 1 0 20%;
-  margin: 1.25%;
-  border: #3131e7 1px solid; }
-  /* line 55, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+  align-self: stretch;
+  margin: 2em 1%;
+  border: 0.1em solid black; }
+  /* line 56, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
   .grid-item:before, .grid-item:after {
     flex-basis: 0;
     order: 1; }
-  /* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .grid-item:nth-child(7n + 1) {
-    background: #6760e5; }
-  /* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .grid-item:nth-child(7n + 2) {
-    background: #dde560; }
-  /* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .grid-item:nth-child(7n + 3) {
-    background: #609be5; }
-  /* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .grid-item:nth-child(7n + 4) {
-    background: #aa60e5; }
-  /* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .grid-item:nth-child(7n + 5) {
-    background: #9be560; }
-  /* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .grid-item:nth-child(7n + 6) {
-    background: #e5aa60; }
-  /* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .grid-item:nth-child(7n + 7) {
-    background: #e56760; }
-
-/* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-.list-group .list-group_item:nth-child(7n + 1) {
-  background: #da9c9e; }
-
-/* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-.list-group .list-group_item:nth-child(7n + 2) {
-  background: #9cdab8; }
-
-/* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-.list-group .list-group_item:nth-child(7n + 3) {
-  background: #9cbeda; }
-
-/* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-.list-group .list-group_item:nth-child(7n + 4) {
-  background: #da9cbe; }
-
-/* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-.list-group .list-group_item:nth-child(7n + 5) {
-  background: #d79cda; }
-
-/* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-.list-group .list-group_item:nth-child(7n + 6) {
-  background: #dad79c; }
-
-/* line 89, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-.list-group .list-group_item:nth-child(7n + 7) {
-  background: #dab89c; }
-
-/* line 69, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
-.list-group .list-group_item h4 {
-  text-transform: capitalize; }
-  /* line 55, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-  .list-group .list-group_item h4:before, .list-group .list-group_item h4:after {
-    flex-basis: 0;
-    order: 1; }
-  /* line 76, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
-  .list-group .list-group_item h4:after {
-    content: ' : ';
-    width: 10px; }
-    /* line 55, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
-    .list-group .list-group_item h4:after:before, .list-group .list-group_item h4:after:after {
+  /* line 52, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+  .grid-item .grid-item_header {
+    flex: 1 1 100%;
+    padding: 2% 0; }
+    /* line 56, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+    .grid-item .grid-item_header:before, .grid-item .grid-item_header:after {
       flex-basis: 0;
       order: 1; }
+  /* line 60, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+  .grid-item .grid-item_flexed {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap row;
+    align-items: flex-start;
+    border: 1px solid black; }
+    /* line 56, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+    .grid-item .grid-item_flexed:before, .grid-item .grid-item_flexed:after {
+      flex-basis: 0;
+      order: 1; }
+    /* line 67, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+    .grid-item .grid-item_flexed .post-info {
+      flex: 1 1 30.33333%;
+      margin: 0 1%;
+      border: 1px solid #aaa;
+      max-width: 100%;
+      max-height: 100%;
+      font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 1em; }
+      /* line 56, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+      .grid-item .grid-item_flexed .post-info:before, .grid-item .grid-item_flexed .post-info:after {
+        flex-basis: 0;
+        order: 1; }
+    /* line 73, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+    .grid-item .grid-item_flexed .post-description {
+      flex: 1 1 30.33333%;
+      margin: 0 1%;
+      border: 1px solid #aaa;
+      max-width: 100%;
+      max-height: 100%; }
+      /* line 56, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+      .grid-item .grid-item_flexed .post-description:before, .grid-item .grid-item_flexed .post-description:after {
+        flex-basis: 0;
+        order: 1; }
+    /* line 77, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+    .grid-item .grid-item_flexed .post-logo {
+      flex: 1 1 30.33333%;
+      margin: 0 1%;
+      border: 1px solid #aaa;
+      max-width: 100%;
+      max-height: 100%; }
+      /* line 56, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+      .grid-item .grid-item_flexed .post-logo:before, .grid-item .grid-item_flexed .post-logo:after {
+        flex-basis: 0;
+        order: 1; }
+
+/* line 86, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+.post:nth-child(7n + 1) {
+  background: #da9c9e; }
+
+/* line 86, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+.post:nth-child(7n + 2) {
+  background: #9cdab8; }
+
+/* line 86, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+.post:nth-child(7n + 3) {
+  background: #9cbeda; }
+
+/* line 86, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+.post:nth-child(7n + 4) {
+  background: #da9cbe; }
+
+/* line 86, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+.post:nth-child(7n + 5) {
+  background: #d79cda; }
+
+/* line 86, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+.post:nth-child(7n + 6) {
+  background: #dad79c; }
+
+/* line 86, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/abstracts/_mixins.scss */
+.post:nth-child(7n + 7) {
+  background: #dab89c; }
+
+/* line 90, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+.post .post-header {
+  margin: 0 0 1em 0;
+  background-color: #b34348; }
+
+/* line 95, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+.post .post-logo {
+  background-color: #b34380; }
+  /* line 98, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+  .post .post-logo img {
+    max-height: 100%;
+    max-width: 100%; }
+
+/* line 110, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+.list-group {
+  display: flex;
+  flex-flow: wrap column;
+  padding-left: 0;
+  margin: 0;
+  border: 5px solid white; }
+  /* line 116, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+  .list-group .list-group_item {
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    width: 100%;
+    color: #495057;
+    text-align: inherit;
+    align-self: stretch; }
+    /* line 128, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+    .list-group .list-group_item h3 {
+      border: 1px solid white;
+      text-transform: uppercase; }
+      /* line 131, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+      .list-group .list-group_item h3:after {
+        content: ' : ';
+        width: 10px; }
 
 /*# sourceMappingURL=main.css.map */

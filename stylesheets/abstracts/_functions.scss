@@ -28,3 +28,11 @@
 @function font($path, $base: $base-url) {
   @return asset($base, 'fonts/', $path);
 }
+
+
+ @function gridflex($color-name, $color-variant) {
+  // map inception
+  @return map-get(map-get($grid-flex, $color-name), $color-variant);
+}
+
+
