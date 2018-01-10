@@ -613,12 +613,12 @@ h2 {
 
 .grid-item .grid-item_flexed .post-info {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 30.33333%;
-  flex: 1 1 30.33333%;
-  margin: 0 1%;
+  -ms-flex: 1 0 30.03333%;
+  flex: 1 0 30.03333%;
+  margin: 0 1.1%;
   border: 1px solid #aaa;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100vh;
   font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 1em;
 }
@@ -633,12 +633,12 @@ h2 {
 
 .grid-item .grid-item_flexed .post-description {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 30.33333%;
-  flex: 1 1 30.33333%;
-  margin: 0 1%;
+  -ms-flex: 1 0 30.03333%;
+  flex: 1 0 30.03333%;
+  margin: 0 1.1%;
   border: 1px solid #aaa;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100vh;
 }
 
 .grid-item .grid-item_flexed .post-description:before, .grid-item .grid-item_flexed .post-description:after {
@@ -651,12 +651,12 @@ h2 {
 
 .grid-item .grid-item_flexed .post-logo {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 30.33333%;
-  flex: 1 1 30.33333%;
-  margin: 0 1%;
+  -ms-flex: 1 0 30.03333%;
+  flex: 1 0 30.03333%;
+  margin: 0 1.1%;
   border: 1px solid #aaa;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100vh;
 }
 
 .grid-item .grid-item_flexed .post-logo:before, .grid-item .grid-item_flexed .post-logo:after {
@@ -696,8 +696,17 @@ h2 {
 }
 
 .post .post-header {
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
   background-color: #b34348;
+}
+
+.post .post-info {
+  width: 100px;
+  color: paleturquoise;
+}
+
+.post .post-info p {
+  border: 2px solid;
 }
 
 .post .post-logo {
@@ -727,23 +736,21 @@ h2 {
   display: block;
   padding: 12px 20px;
   padding: .75rem 1.25rem;
-  margin-bottom: -1px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, .125);
+  border-bottom: 2px solid rgba(0, 0, 0, .125);
   width: 100%;
   color: #495057;
-  text-align: inherit;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
 }
 
-.list-group .list-group_item h3 {
+.list-group .list-group_item h4 {
   border: 1px solid white;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
-.list-group .list-group_item h3:after {
+.list-group .list-group_item h4:after {
   content: ' : ';
   width: 10px;
 }
