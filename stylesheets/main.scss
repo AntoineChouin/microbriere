@@ -92,94 +92,113 @@ h1 {
   }
   &_flexed {
     @include flexfix;
-    @include media(">=desktop") {
+     @include media(">=tv") {
       display: flex;
       flex-flow: row wrap;
-      .post-info {
-        @include flexfix;
-        @include gridflex(desktop);
-      }
-      .post-description {
-        @include flexfix;
-        @include gridflex(desktop);
-      }
-      .post-logo {
-        @include flexfix;
-        @include gridflex(desktop);
-      }
+//      .post-info {
+//        @include flexfix;
+//        @include gridflex(tv);
+//      }
+//      .post-description {
+//        @include flexfix;
+//        @include gridflex(tv);
+//      }
+//      .post-logo {
+//        @include flexfix;
+//        @include gridflex(tv);
+//      }
     }
-    @include media("<=phone") {
+    @include media(">=desktop", "<tv") {
       display: flex;
       flex-flow: row wrap;
-      .post-info {
-        @include flexfix;
-        @include gridflex(phone);
-      }
-      .post-description {
-        @include flexfix;
-        @include gridflex(phone);
-      }
-      .post-logo {
-        @include flexfix;
-        @include gridflex(phone);
-      }
+//      .post-info {
+//        @include flexfix;
+//        @include gridflex(desktop);
+//      }
+//      .post-description {
+//        @include flexfix;
+//        @include gridflex(desktop);
+//      }
+//      .post-logo {
+//        @include flexfix;
+//        @include gridflex(desktop);
+//      }
+    }
+    @include media(">=tablet", "<desktop") {
+      display: flex;
+      flex-flow: row wrap;
+//      .post-info {
+//        @include flexfix;
+//        @include gridflex(phone);
+//      }
+//      .post-description {
+//        @include flexfix;
+//        @include gridflex(phone);
+//      }
+//      .post-logo {
+//        @include flexfix;
+//        @include gridflex(phone);
+//      }
     }
     @include media(">=phone", "<tablet") {
       display: flex;
       flex-flow: row wrap;
-      .post-info {
-        @include flexfix;
-//        @include gridflex(desktop);
-      }
-      .post-description {
-        @include flexfix;
-//        @include gridflex(desktop);
-      }
-      .post-logo {
-        @include flexfix;
-//        @include gridflex(desktop);
-      }
+//      .post-info {
+//        @include flexfix;
+////        @include gridflex(desktop);
+//      }
+//      .post-description {
+//        @include flexfix;
+////        @include gridflex(desktop);
+//      }
+//      .post-logo {
+//        @include flexfix;
+////        @include gridflex(desktop);
+//      }
     }
-    @include media(">=phone") {
+    @include media("<=phone") {
       display: flex;
       flex-flow: row wrap;
-      .post-info {
-        @include flexfix;
-        @include gridflex(phone);
-      }
-      .post-description {
-        @include flexfix;
-        @include gridflex(phone);
-      }
-      .post-logo {
-        @include flexfix;
-        @include gridflex(phone);
-      }
+//      .post-info {
+//        @include flexfix;
+//        @include gridflex(phone);
+//        order: 1;
+//      }
+//      .post-description {
+//        @include flexfix;
+//        @include gridflex(phone);
+//         order: 1;
+//      }
+//      .post-logo {
+//        @include flexfix;
+//        @include gridflex(phone);
+//        order: 2;
+//      }
     }
   }
 }
 
 .post {
   font-size: ms(0);
-  &-info {
-    display: flex;
-    flex-flow: column wrap;
-    p {
-      @include flexfix;
-      margin: 0;
-      padding: 0;
-      flex: 1 0 33.33%;
-      &:first-child {
-        color: navajowhite;
-      }
-      &:nth-child(1n+2) {
-        color: aquamarine;
-      }
-      &:last-child {
-        color: azure;
-      }
-    }
-  }
+//  &-info {
+//    display: flex;
+//    flex-flow: column wrap;
+//    p {
+//      @include flexfix;
+//      margin: 0;
+//      padding: 0;
+//      flex: 1 0 33.33%;
+//      &:first-child {
+//        color: navajowhite;
+//      }
+//      &:nth-child(1n+2) {
+//        color: aquamarine;
+//      }
+//      &:last-child {
+//        color: azure;
+//      }
+//    }
+//  }
   &-description {
     background: #fea;
   }
