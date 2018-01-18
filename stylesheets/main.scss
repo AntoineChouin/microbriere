@@ -157,9 +157,11 @@ h1 {
 //    margin: 1% 0;
     max-width: 100%;
     flex: 1 2;
+    text-align: center;
     
     h4{
       text-transform: uppercase;
+      text-decoration: underline;
     }
   }
 }

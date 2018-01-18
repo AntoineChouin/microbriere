@@ -965,8 +965,10 @@ h1 {
   -webkit-box-flex: 1;
   -ms-flex: 1 2;
   flex: 1 2;
+  text-align: center;
 }
 
 .list-group_item h4 {
   text-transform: uppercase;
+  text-decoration: underline;
 }

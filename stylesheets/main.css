@@ -827,9 +827,11 @@ h1 {
     border: 1px solid;
     padding: 0.75rem 1.25rem;
     max-width: 100%;
-    flex: 1 2; }
-    /* line 161, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
+    flex: 1 2;
+    text-align: center; }
+    /* line 162, /Users/Antoinechouinard/Documents/Programmation/Github/microbriere/stylesheets/main.scss */
     .list-group_item h4 {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-decoration: underline; }
 
 /*# sourceMappingURL=main.css.map */
