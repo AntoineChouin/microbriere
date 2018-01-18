@@ -55,13 +55,15 @@ h1 {
   color: royalblue;
   background-color: aliceblue;
   font-family: $code-font-stack;
-  @include media(">small", "<=medium") {
+  @include media(">phone", "<=tablet") {
     width: 50%;
+    margin: 0 auto;
+    text-align: center;
     color: navajowhite;
     background-color: forestgreen;
     border: 1px solid blue;
   }
-  @include media(">medium", "<=large") {
+  @include media(">tablet", "<=desktop") {
     width: 75%;
     margin: 0 auto;
     text-align: center;
@@ -69,15 +71,16 @@ h1 {
     background-color: deeppink;
     border: 1px solid blue;
   }
-  @include media(">=large") {
+  @include media(">=desktop") {
     display: flex;
+    color: mix(darkturquoise, deeppink);
   }
 }
 
 //    @include gridflex(primary);
 .grid-item {
   @include flexfix;
-  @include bckg($vertdegris);
+  //  @include bckg($vertdegris);
   align-self: stretch;
   margin: 2em 1%;
   height: 100%;
@@ -89,20 +92,69 @@ h1 {
   }
   &_flexed {
     @include flexfix;
-    //    @include gridflex(primary);
-    display: flex;
-    flex-flow: row column;
-    .post-info {
-      @include flexfix;
-      @include gridflex(primary);
+    @include media(">=desktop") {
+      display: flex;
+      flex-flow: row wrap;
+      .post-info {
+        @include flexfix;
+        @include gridflex(desktop);
+      }
+      .post-description {
+        @include flexfix;
+        @include gridflex(desktop);
+      }
+      .post-logo {
+        @include flexfix;
+        @include gridflex(desktop);
+      }
     }
-    .post-description {
-      @include flexfix;
-      @include gridflex(primary);
+    @include media("<=phone") {
+      display: flex;
+      flex-flow: row wrap;
+      .post-info {
+        @include flexfix;
+        @include gridflex(phone);
+      }
+      .post-description {
+        @include flexfix;
+        @include gridflex(phone);
+      }
+      .post-logo {
+        @include flexfix;
+        @include gridflex(phone);
+      }
     }
-    .post-logo {
-      @include flexfix;
-      @include gridflex(primary);
+    @include media(">=phone", "<tablet") {
+      display: flex;
+      flex-flow: row wrap;
+      .post-info {
+        @include flexfix;
+//        @include gridflex(desktop);
+      }
+      .post-description {
+        @include flexfix;
+//        @include gridflex(desktop);
+      }
+      .post-logo {
+        @include flexfix;
+//        @include gridflex(desktop);
+      }
+    }
+    @include media(">=phone") {
+      display: flex;
+      flex-flow: row wrap;
+      .post-info {
+        @include flexfix;
+        @include gridflex(phone);
+      }
+      .post-description {
+        @include flexfix;
+        @include gridflex(phone);
+      }
+      .post-logo {
+        @include flexfix;
+        @include gridflex(phone);
+      }
     }
   }
 }
@@ -112,17 +164,14 @@ h1 {
   &-info {
     display: flex;
     flex-flow: column wrap;
-    //    text-align: center;
-    //    background: #afe;
-    //    align-content: space-between;
-    //    align-items: center;
     p {
-      //      color: wheat;
+      @include flexfix;
       margin: 0;
       padding: 0;
-      background-color: mix(firebrick, sandybrown);
       flex: 1 0 33.33%;
-      &:first-child {}
+      &:first-child {
+        color: navajowhite;
+      }
       &:nth-child(1n+2) {
         color: aquamarine;
       }
@@ -135,7 +184,9 @@ h1 {
     background: #fea;
   }
   &-logo {
-    background: #efaafe;
+    //    background: #efaafe;
+    margin: 0;
+    padding: 0;
     img {
       max-height: 100%;
       max-width: 100%;
@@ -147,19 +198,18 @@ h1 {
   display: flex;
   justify-content: center;
   flex-flow: column wrap;
-//  align-content: space-around;
-////  align-items: center;
+  //  align-content: space-around;
+  ////  align-items: center;
   &_item {
-//    @include bckg($vertdegris);
-    background-color: #fff; 
+    @include flexfix;
+    background-color: trans#fff;
     border: 1px solid;
     padding: 0.75rem 1.25rem;
-//    margin: 1% 0;
+    //    margin: 1% 0;
     max-width: 100%;
     flex: 1 2;
     text-align: center;
-    
-    h4{
+    h4 {
       text-transform: uppercase;
       text-decoration: underline;
     }

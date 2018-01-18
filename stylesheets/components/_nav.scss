@@ -1,6 +1,7 @@
 // Inspiré de ceci
 //https://codepen.io/leemarkwood/pen/XJBwJR?limit=all&page=2&q=navbar
 
+
 $ease: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $content-animation: scale(0.7) rotateX(-230deg);
 .navbar {
@@ -16,6 +17,7 @@ $content-animation: scale(0.7) rotateX(-230deg);
   .brand {
     display: inline-block;
   }
+
   .link {
     display: block;
     width: 100%;
@@ -23,7 +25,7 @@ $content-animation: scale(0.7) rotateX(-230deg);
     padding: 1em;
     text-decoration: none;
     background: seagreen;
-    @include media(">medium", "<=large"){
+    @include media(">tablet", "<=desktop"){
        background-color: #8b2e62;
       color: forestgreen;
       text-align: center;
@@ -42,6 +44,13 @@ $content-animation: scale(0.7) rotateX(-230deg);
     background: black;
     color: white;
     float: right;
+    &-aside{
+      @include mdqrselector;
+      width: 100%;
+    }
+    span{
+      display: none;
+    }
   }
   .toggle {
     padding: 1em;

@@ -60,6 +60,55 @@
   }
 }
 
+@mixin mdqrselector{
+  
+   @include media("<phone") {
+    background-color: #def;
+    
+    &:before {
+      content: "<=phone";
+    }
+  }
+
+  @include media(">=phone", "<tablet") {
+    background-color: #abc;
+    
+    &:before {
+      content: ">=phone, <tablet";
+    }    
+  }
+
+  @include media(">=tablet", "<desktop") {
+    background-color: #aabbcc;
+    
+    &:before {
+      content: ">=tablet, <desktop";
+    }    
+  }
+
+  @include media(">=desktop", "<tv") {
+    background-color: #aacccc;
+    
+    &:before {
+      content: ">=desktop, < tv";
+    }
+  }
+   @include media(">=tv") {
+    background-color: #aaaacc;
+    
+    &:before {
+      content: " < tv";
+    }
+  }
+  
+  @include media("retina2x") {
+    background-color: #ccaaaa;
+    &:after {
+      content: "Retina" !important;
+    }    
+  }
+  
+}
 @mixin wrapper {
   @include clearfix;
   margin: 0 auto;

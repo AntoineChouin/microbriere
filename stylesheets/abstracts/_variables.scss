@@ -63,25 +63,38 @@ $fluid-max-width: 100vw;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 25em,
-  'medium': 48em,
-  'large': 60em,
+  'phone': 25em,
+  'tablet': 48em,
+  'desktop': 60em,
   "tv": 75em,
 ) !default;
-
+$unit-intervals: (
+  'px': 1,
+  'em': 0.01,
+  'rem': 0.1
+) !default;
 
 ////Grid-items-flex
 
 $grid-flex: (
 
-  primary: (
+  desktop: (
     flex-width: 100%,
     flex-column: 3,
-    flex-margin: 1.1%,
+    flex-margin: 1.5%,
   ),
-
-  mobile: (
+    tablet: (
     flex-width: 100%,
+    flex-column: 2,
+    flex-margin: 1%,
+  ),
+  phone:(
+    flex-width: 100%,
+    flex-column: 1,
+    flex-margin: 0.65%,
+  ),
+  mobile: (
+    flex-width: 80em,
     flex-column: 1,
     flex-margin: 0.1%,
 
