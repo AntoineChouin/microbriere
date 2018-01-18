@@ -10,7 +10,7 @@ var app4 = new Vue({
         }
         , info: {
           textI: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sint asperiores, soluta ipsam. Enim ducimus ab voluptatibus a est perferendis, tempora, aliquam dolore reiciendis voluptates excepturi, aperiam veritatis vero sed."
-          , textII: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, nihil est. Architecto id atque, ea libero est iure omnis ipsa, autem dolore expedita nostrum dolores.'
+          , textII: " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sint asperiores, soluta ipsam. Enim ducimus ab voluptatibus a est perferendis, tempora, aliquam dolore reiciendis voluptates excepturi, aperiam veritatis vero sed."
         }
         , descriptif: {
             amertume: "25"
@@ -75,4 +75,9 @@ var app4 = new Vue({
 
     ]
   }
-})
+});
+
+ $(".toggle").on("click", function () {
+      $(".toggle").parent().toggleClass('active');
+    });
+

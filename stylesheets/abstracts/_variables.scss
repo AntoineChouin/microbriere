@@ -63,10 +63,10 @@ $fluid-max-width: 100vw;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
-  "tv": 1200px,
+  'small': 25em,
+  'medium': 48em,
+  'large': 60em,
+  "tv": 75em,
 ) !default;
 
 

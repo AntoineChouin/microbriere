@@ -1,0 +1,29 @@
+.wrapper {
+  @include container-fluid;
+  font-size: ms(1);
+  paddin: 1% 0;
+  color: $text-color !important;
+  &-header {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/images/beard_graphic_1x.png");
+    background-color: antiquewhite;
+    height: 100vh;
+  }
+  & &-navbar {
+//    display: none;
+    font-family: cursive !important;
+
+  }
+  & &-grid {
+    display: flex;
+    flex-flow: wrap row;
+    @include bckg ($vertdegris);
+    //    margin: 0 1vw;
+  }
+  &-footer {
+    display: flex;
+  }
+}

@@ -2,104 +2,77 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /> </head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" /> </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <body>
-    <div class="wrapper">
-        <header class="wrapper-header">
-            <h2>This is a test</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ex nesciunt reprehenderit dolor ad suscipit alias, velit quis voluptatibus repellendus, aliquam voluptates, culpa deserunt sint, soluta placeat minima dolorum! Quod.</p>
+  <div class="wrapper">
+    <nav class="wrapper-navbar navbar">
+      <a href="#" class="toggle"> <i class="fa fa-reorder"></i> </a>
+      <aside class="brand"> <a href="#" class="brand-aside">brand</a> </aside>
+      <div class="left"> <a href="#" class="link">Biere #1</a> <a href="#" class="link">Biere #2</a> <a href="#" class="link">Biere #3</a> <a href="#" class="link">Biere #4</a> <a href="#" class="link">Biere #5</a> </div>
+      <!--      <div class="right"> <a href="#" class="link"> <i class="fa fa-snowflake-o" aria-hidden="true"></i>Right Link 2</a> </div>-->
+    </nav>
+    <header class="wrapper-header">
+      <h1>This is a test</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ex nesciunt reprehenderit dolor ad suscipit alias, velit quis voluptatibus repellendus, aliquam voluptates, culpa deserunt sint, soluta placeat minima dolorum! Quod.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam debitis neque voluptas obcaecati, recusandae alias natus id unde placeat deleniti deserunt mollitia exercitationem. Laboriosam, laborum.</p>
+      <p>Praesentium fugiat, beatae velit? Dolores voluptates, magni iusto voluptatem maxime nihil laudantium, cumque alias asperiores, laboriosam cupiditate hic nesciunt rem. Ipsa, nisi reprehenderit expedita exercitationem.</p>
+      <p>Fuga tempora, iste voluptas a. Dolores nemo veniam, commodi a fugit dolorem. Praesentium temporibus, dolorum veritatis aut, labore asperiores veniam aliquam neque unde iure tenetur!</p>
+    </header>
+    <section class="wrapper-grid wrapper-post" id="app-4">
+      <!--            <article class="grid-item post" v-for="todo in todos">-->
+      <article class="grid-item post" v-for="todo in todos">
+        <header class="grid-item_header post-header">
+          <h3>
+            {{ todo.title.principale }}
+          </h3>
+          <p> {{ todo.title.secondaire }}</p>
         </header>
-        <section class="wrapper-grid wrapper-post" id="app-4">
-            <!--            <article class="grid-item post" v-for="todo in todos">-->
-            <article class="grid-item post" v-for="todo in todos">
-                <header class="grid-item_header post-header">
-                    <h3>
-                        {{ todo.title.principale }}
-                    </h3>
-                    <p> {{ todo.title.secondaire }}</p>
-                </header>
-
-                <div class="grid-item_flexed">
-
-                    <section class="post-info ">
-                        <p>{{ todo.info.textI }}</p>
-                        <p>{{ todo.info.textII }}</p>
-                    </section>
-
-                    <section class="post-description list-group ">
-
-                        <div class="list-group_item">
-                            <h4>
-                                <span> amertume </span>
-                            </h4>
-                            <p>{{ todo.descriptif.amertume }}</p>
-                        </div>
-
-                        <div class="list-group_item">
-                            <h4><span> style </span></h4>
-                            <p>{{ todo.descriptif.style }}</p>
-                        </div>
-
-                         <div class="list-group_item">
-                            <h4><span> Taux d'alcool (%)</span></h4>
-                            <p>{{ todo.descriptif.alcool }}</p>
-                        </div>
-
-                         <div class="list-group_item">
-                            <h4><span>Verre</span></h4>
-                            <p>{{ todo.descriptif.verre }}</p>
-                        </div>
-
-                         <div class="list-group_item">
-                            <h4><span>veillessement</span></h4>
-                            <p>{{ todo.descriptif.veillessement }}</p>
-                        </div>
-
-                    </section>
-
-                    <aside class="post-logo">
-                        <img src="https://journalmetrocom.files.wordpress.com/2016/11/dsc_2286.jpg" alt="Image Bouteille">
-                    </aside>
-                </div>
-            </article>
-        </section>
-
-        <footer class="wrapper-footer">
-            <ul class="list-group">
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Facilis repellendus, minima mollitia.</li>
-                <li>Aliquid pariatur, nihil ducimus.</li>
-                <li>Laudantium eius quae rerum.</li>
-            </ul>
-            <ul class="list-group">
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Quod doloremque autem quis.</li>
-                <li>Aut, ut distinctio eveniet.</li>
-                <li>Quasi necessitatibus quidem odio.</li>
-            </ul>
-            <ul class="list-group">
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Omnis quidem assumenda nulla?</li>
-                <li>Minima doloremque, ut ea.</li>
-                <li>Temporibus quod saepe, corporis!</li>
-            </ul>
-            <ul class="list-group">
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Consequuntur temporibus, eos delectus.</li>
-                <li>Porro nemo hic dignissimos.</li>
-                <li>Nulla quidem alias excepturi.</li>
-            </ul>
-        </footer>
-    </div>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/vue/dist/vue.js"></script>
-    <script src="node_modules/holderjs/holder.min.js"></script>
-    <script src="js/main.js"></script>
+        <div class="grid-item_flexed post-indication">
+          <section class="post-info ">
+            <p>{{ todo.info.textI }}</p>
+            <p>{{ todo.info.textII }}</p>
+            <p>{{ todo.info.textII }}</p>
+          </section>
+          <section class="post-description list-group ">
+            <div class="list-group_item">
+              <h4>
+                 <span>  Amertume</span>  <i>(IBU) </i> 
+              </h4>
+              <p>{{ todo.descriptif.amertume }}</p>
+            </div>
+            <div class="list-group_item">
+              <h4>Style</h4>
+              <p>{{ todo.descriptif.style }}</p>
+            </div>
+            <div class="list-group_item">
+              <h4> <span> Taux d'alcool</span> <i>(%)</i></h4>
+              <p>{{ todo.descriptif.alcool }}</p>
+            </div>
+            <div class="list-group_item">
+              <h4><span>Verre</span></h4>
+              <p>{{ todo.descriptif.verre }}</p>
+            </div>
+            <div class="list-group_item">
+              <h4><span>veillessement</span></h4>
+              <p>{{ todo.descriptif.veillessement }}</p>
+            </div>
+          </section>
+          <aside class="post-logo no-bg-size "> <img src="images/1-8pCx2Tf16nAxxXS_1niF-Q.jpeg" alt="Image Bouteille"> </aside>
+        </div>
+      </article>
+    </section>
+    <footer class="wrapper-footer"> </footer>
+  </div>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/vue/dist/vue.js"></script>
+  <script src="node_modules/holderjs/holder.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
