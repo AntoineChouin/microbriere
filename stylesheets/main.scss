@@ -77,128 +77,103 @@ h1 {
   }
 }
 
+//#e58c8d
+//#048CC2
+//#04749C
+//#7b9a9f
+//#28474a
 //    @include gridflex(primary);
+.grid-article {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  @include bckg($vertdegris);
+  margin: 2vh 1% !important; 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+   flex-flow: column wrap;
+  .grid-title {
+    @include flexfix;
+
+    
+    border-bottom: 4px solid white;
+  }
+}
+
+.grid-data {
+  display: flex;
+  @include flexfix;
+  @include media(">=tv") {
+flex-flow: wrap row;
+
+    .grid {
+      &-logo {
+        flex: 1 2 50%;
+        align-self: flex-;
+      }
+      &-item {
+        flex: 1 2 50%;
+        align-self: center;
+      }
+    }
+  }
+  @include media(">=desktop", "<tv") {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .grid {
+      &-logo {
+        align-self: flex-end;
+      }
+      &-item {
+        align-self: flex-start;
+      }
+    }
+  }
+  @include media(">=tablet", "<desktop") {
+    flex-flow: row wrap;
+  }
+  @include media(">=phone", "<tablet") {
+    flex-flow: wrap column;
+  }
+  @include media("<=phone") {
+    flex-flow: row wrap;
+  }
+
+}
+
 .grid-item {
   @include flexfix;
-  //  @include bckg($vertdegris);
-  align-self: stretch;
-  margin: 2em 1%;
-  height: 100%;
-  max-width: 100vw;
-  &_header {
-    @include flexfix;
-    flex: 1 1 100%;
-    padding: 2% 0;
-  }
-  &_flexed {
-    @include flexfix;
-     @include media(">=tv") {
-      display: flex;
-      flex-flow: row wrap;
-//      .post-info {
-//        @include flexfix;
-//        @include gridflex(tv);
-//      }
-//      .post-description {
-//        @include flexfix;
-//        @include gridflex(tv);
-//      }
-//      .post-logo {
-//        @include flexfix;
-//        @include gridflex(tv);
-//      }
-    }
-    @include media(">=desktop", "<tv") {
-      display: flex;
-      flex-flow: row wrap;
-//      .post-info {
-//        @include flexfix;
-//        @include gridflex(desktop);
-//      }
-//      .post-description {
-//        @include flexfix;
-//        @include gridflex(desktop);
-//      }
-//      .post-logo {
-//        @include flexfix;
-//        @include gridflex(desktop);
-//      }
-    }
-    @include media(">=tablet", "<desktop") {
-      display: flex;
-      flex-flow: row wrap;
-//      .post-info {
-//        @include flexfix;
-//        @include gridflex(phone);
-//      }
-//      .post-description {
-//        @include flexfix;
-//        @include gridflex(phone);
-//      }
-//      .post-logo {
-//        @include flexfix;
-//        @include gridflex(phone);
-//      }
-    }
-    @include media(">=phone", "<tablet") {
-      display: flex;
-      flex-flow: row wrap;
-//      .post-info {
-//        @include flexfix;
-////        @include gridflex(desktop);
-//      }
-//      .post-description {
-//        @include flexfix;
-////        @include gridflex(desktop);
-//      }
-//      .post-logo {
-//        @include flexfix;
-////        @include gridflex(desktop);
-//      }
-    }
-    @include media("<=phone") {
-      display: flex;
-      flex-flow: row wrap;
-//      .post-info {
-//        @include flexfix;
-//        @include gridflex(phone);
-//        order: 1;
-//      }
-//      .post-description {
-//        @include flexfix;
-//        @include gridflex(phone);
-//         order: 1;
-//      }
-//      .post-logo {
-//        @include flexfix;
-//        @include gridflex(phone);
-//        order: 2;
-//      }
-    }
-  }
+  box-sizing: border-box;
+  //  @include media(">=tv") {
+  //  }
+  //  @include media(">=desktop", "<tv") {
+  //    
+  //
+  //  }
+  //  @include media(">=tablet", "<desktop") {
+  //    
+  //    
+  //  }
+  //  @include media(">=phone", "<tablet") {
+  //    display: flex;
+  //    flex-flow: row wrap;
+  //  
+  //  }
+  //  @include media("<=phone") {
+  //    display: flex;
+  //    flex-flow: row wrap;
+  //
+  //  }
 }
 
 .post {
   font-size: ms(0);
-//  &-info {
-//    display: flex;
-//    flex-flow: column wrap;
-//    p {
-//      @include flexfix;
-//      margin: 0;
-//      padding: 0;
-//      flex: 1 0 33.33%;
-//      &:first-child {
-//        color: navajowhite;
-//      }
-//      &:nth-child(1n+2) {
-//        color: aquamarine;
-//      }
-//      &:last-child {
-//        color: azure;
-//      }
-//    }
-//  }
+  &-header {
+    color: lightcoral;
+  }
   &-description {
     background: #fea;
   }
@@ -216,15 +191,13 @@ h1 {
 .list-group {
   display: flex;
   justify-content: center;
-  flex-flow: column wrap;
-  //  align-content: space-around;
+  flex-flow: column wrap; //  align-content: space-around;
   ////  align-items: center;
   &_item {
     @include flexfix;
     background-color: trans#fff;
     border: 1px solid;
-    padding: 0.75rem 1.25rem;
-    //    margin: 1% 0;
+    padding: 0.75rem 1.25rem; //    margin: 1% 0;
     max-width: 100%;
     flex: 1 2;
     text-align: center;

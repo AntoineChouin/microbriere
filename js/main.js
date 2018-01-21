@@ -1,6 +1,6 @@
 console.log("I am being dropped");
 var app4 = new Vue({
-  el: '#app-4'
+  el: '#app-beers'
   , data: {
     todos: [
       {

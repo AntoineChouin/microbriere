@@ -17,6 +17,7 @@
       <div class="left"> <a href="#" class="link">Biere #1</a> <a href="#" class="link">Biere #2</a> <a href="#" class="link">Biere #3</a> <a href="#" class="link">Biere #4</a> <a href="#" class="link">Biere #5</a> </div>
       <!--      <div class="right"> <a href="#" class="link"> <i class="fa fa-snowflake-o" aria-hidden="true"></i>Right Link 2</a> </div>-->
     </nav>
+    
     <header class="wrapper-header">
       <h1>This is a test</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ex nesciunt reprehenderit dolor ad suscipit alias, velit quis voluptatibus repellendus, aliquam voluptates, culpa deserunt sint, soluta placeat minima dolorum! Quod.</p>
@@ -24,48 +25,50 @@
       <p>Praesentium fugiat, beatae velit? Dolores voluptates, magni iusto voluptatem maxime nihil laudantium, cumque alias asperiores, laboriosam cupiditate hic nesciunt rem. Ipsa, nisi reprehenderit expedita exercitationem.</p>
       <p>Fuga tempora, iste voluptas a. Dolores nemo veniam, commodi a fugit dolorem. Praesentium temporibus, dolorum veritatis aut, labore asperiores veniam aliquam neque unde iure tenetur!</p>
     </header>
-    <section class="wrapper-grid wrapper-post" id="app-4">
-      <!--            <article class="grid-item post" v-for="todo in todos">-->
-      <article class="grid-item post" v-for="todo in todos">
-        <header class="grid-item_header post-header">
+    
+    <section class="wrapper-grid wrapper-post" id="app-beers">
+  
+      <article class="grid-article post" v-for="todo in todos">
+        <header class="grid-title post-title">
           <h3>
             {{ todo.title.principale }}
           </h3>
           <p> {{ todo.title.secondaire }}</p>
         </header>
-        
-        <div class="grid-item_flexed post-indication">
-          <section class="post-info ">
-            <p>{{ todo.info.textI }}</p>
-            <p>{{ todo.info.textII }}</p>
-            <p>{{ todo.info.textII }}</p>
-          </section>
-          <section class="post-description list-group ">
-            <div class="list-group_item">
-              <h4>
+        <article class="grid-data post-data">
+          <div class="grid-item">
+            <section class="post-info grid-info ">
+              <p>{{ todo.info.textI }}</p>
+              <p>{{ todo.info.textII }}</p>
+              <p>{{ todo.info.textII }}</p>
+            </section>
+            <section class="post-description grid-list list-group ">
+              <div class="list-group_item">
+                <h4>
                  <span>  Amertume</span>  <i>(IBU) </i> 
               </h4>
-              <p>{{ todo.descriptif.amertume }}</p>
-            </div>
-            <div class="list-group_item">
-              <h4>Style</h4>
-              <p>{{ todo.descriptif.style }}</p>
-            </div>
-            <div class="list-group_item">
-              <h4> <span> Taux d'alcool</span> <i>(%)</i></h4>
-              <p>{{ todo.descriptif.alcool }}</p>
-            </div>
-            <div class="list-group_item">
-              <h4><span>Verre</span></h4>
-              <p>{{ todo.descriptif.verre }}</p>
-            </div>
-            <div class="list-group_item">
-              <h4><span>veillessement</span></h4>
-              <p>{{ todo.descriptif.veillessement }}</p>
-            </div>
-          </section>
-          <aside class="post-logo no-bg-size "> <img src="images/1-8pCx2Tf16nAxxXS_1niF-Q.jpeg" alt="Image Bouteille"> </aside>
-        </div>
+                <p>{{ todo.descriptif.amertume }}</p>
+              </div>
+              <div class="list-group_item">
+                <h4>Style</h4>
+                <p>{{ todo.descriptif.style }}</p>
+              </div>
+              <div class="list-group_item">
+                <h4> <span> Taux d'alcool</span> <i>(%)</i></h4>
+                <p>{{ todo.descriptif.alcool }}</p>
+              </div>
+              <div class="list-group_item">
+                <h4><span>Verre</span></h4>
+                <p>{{ todo.descriptif.verre }}</p>
+              </div>
+              <div class="list-group_item">
+                <h4><span>veillessement</span></h4>
+                <p>{{ todo.descriptif.veillessement }}</p>
+              </div>
+            </section>
+          </div>
+          <aside class="post-logo grid-item grid-logo "> <img src="images/1-8pCx2Tf16nAxxXS_1niF-Q.jpeg" alt="Image Bouteille"> </aside>
+        </article>
       </article>
       
     </section>
