@@ -2,6 +2,9 @@
  * Basic typography style for copy text
  */
 @import url('https://fonts.googleapis.com/css?family=Arvo|Cambo|Lato');
+$fontLato: 'Lato', sans-serif;
+$fontCambo: 'Cambo', serif;
+$fontArvo: 'Arvo', serif;
 
  $modularscale: ( base: 1em, ratio: 1.25);
 body {
