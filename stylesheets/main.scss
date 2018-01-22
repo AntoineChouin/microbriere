@@ -41,7 +41,7 @@
 body {
   //  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  padding: 5em 0 0 0; //  background-image: url("/images/beard_graphic_1x.png");
+  padding: 20vh 0 0 0; //  background-image: url("/images/beard_graphic_1x.png");
 }
 
 ul {
@@ -56,15 +56,15 @@ h1 {
   background-color: aliceblue;
   font-family: $code-font-stack;
   @include media(">phone", "<=tablet") {
-    width: 50%;
-    margin: 0 auto;
+    width: 90vw;
+    //    margin: 0 auto;
     text-align: center;
     color: navajowhite;
     background-color: forestgreen;
     border: 1px solid blue;
   }
   @include media(">tablet", "<=desktop") {
-    width: 75%;
+    width: 75vw;
     margin: 0 auto;
     text-align: center;
     color: darkturquoise;
@@ -72,7 +72,7 @@ h1 {
     border: 1px solid blue;
   }
   @include media(">=desktop") {
-    display: flex;
+    //    display: flex;
     color: mix(darkturquoise, deeppink);
   }
 }
@@ -90,8 +90,7 @@ h1 {
   @include bckg($vertdegris);
   margin: 2vh 1% !important;
   display: flex;
-  justify-content: center;
-  //  align-content: center;
+  justify-content: center; //  align-content: center;
   flex-flow: row wrap;
 }
 
@@ -99,28 +98,37 @@ h1 {
   @include flexfix;
   flex: 1 3 100%;
   border-bottom: 4px solid white;
+  @include media("<=tablet") {
+    margin: 0;
+    width: 100%;
+    align-self: stretch;
+  }
 }
 
 .grid-data {
   display: flex;
   @include flexfix;
-  
-  .grid{
-    &-item{
-       @include flexfix;
+  .grid {
+    &-item {
+      @include flexfix;
     }
-     &-logo {
-        @include flexfix;
+    &-logo {
+      @include flexfix;
+      align-self: center;
+      img {
+        border-radius: 5px;
+        max-height: 75vh;
+        max-width: 50vw;
+      }
     }
   }
   @include media(">=tv") {
     flex-flow: wrap row;
     justify-content: space-between;
-//    justify-content: center;
     align-items: center;
     .grid {
       &-item {
-     
+        order: 2;
         width: calc(100% * (3/4));
         align-self: center;
         margin: 2vh 0 !important;
@@ -129,17 +137,16 @@ h1 {
         }
       }
       &-logo {
+        order: 1;
         max-width: 100%;
         max-height: 100%;
-        
         width: calc(100% * (1/4));
         height: 100%;
         align-self: flex-start;
         margin: 2vh 0 !important;
         img {
-          display: inline-flex;
-          //          max-width: 50%;
-          //          max-height: 50%;
+          display: block;
+          margin: 0 auto;
         }
       }
     }
@@ -151,20 +158,97 @@ h1 {
     .grid {
       &-logo {
         align-self: flex-end;
+        max-width: 100%;
+        max-height: 100%;
+        width: calc(100% * (1/4));
       }
       &-item {
-        align-self: flex-start;
+        width: calc(100% * (3/4));
+        //        align-self: center;
       }
     }
   }
   @include media(">=tablet", "<desktop") {
-    flex-flow: row wrap;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: stretch;
+    .grid {
+      &-logo {
+        order: 1;
+        align-self: flex-start;
+        width: calc(100% * (2/4) - (1%*2));
+        margin: 0 1%;
+        img {
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+      $lime: #afe333;
+      &-item {
+        width: calc(100% * (2/4) - (1%*2));
+        margin: 0 1%;
+        background-color: lighten($lime, 15%);
+      }
+      &-info {
+        order: 2;
+        &:first-child {
+          background-color: adjust-hue($lime, 20%);
+          //          width: calc(100% * (2/4));
+        }
+        &:last-child {
+          background-color: adjust-hue($lime, 20%);
+          //          width: calc(100% * (2/4));
+        }
+      }
+    }
   }
   @include media(">=phone", "<tablet") {
     flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    .grid {
+      &-logo {
+        order: 1;
+        align-self: center;
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      &-item {
+        order: 2;
+        //        width: calc(100% * (3/4));
+        align-self: center;
+      }
+    }
   }
   @include media("<=phone") {
     flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    .grid {
+      &-logo {
+        order: 1;
+        align-self: flex-start;
+        img {
+          display: block;
+          margin: 0 auto;
+          max-height: 50% !important;
+          max-width: 50% !important;
+        }
+      }
+      &-item {
+        order: 2;
+        align-self: center;
+      }
+      &-info{
+        
+        &:first-child{
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -174,7 +258,7 @@ h1 {
     background-color: lightcoral !important;
     font-family: $fontLato;
   }
-  & &-info{
+  & &-info {
     font-family: $text-font-stack;
   }
   & &-description {
@@ -185,29 +269,41 @@ h1 {
     //    background: #efaafe;
     margin: 0;
     padding: 0;
-    img {
-      max-height: 100%;
-      max-width: 100%;
-    }
+  }
+}
+
+%grid-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+  flex-flow: wrap row;
+  border: 1px solid rgba(0, 0, 0, .925);
+  div {
+    @include flexfix;
+    flex: 1 2 48%;
+    @include bckg($colorbody);
+    //    flex: 1 2 auto;
+    //    border: 1px solid green;
+    //    color: darkturquoise;
   }
 }
 
 .list-group {
-  display: flex;
-  justify-content: center;
-  flex-flow: column wrap; //  align-content: space-around;
-  ////  align-items: center;
+  @extend %grid-list;
   &_item {
-    @include flexfix;
-    background-color: trans#fff;
-    border: 1px solid;
-    padding: 0.75rem 1.25rem; //    margin: 1% 0;
-    max-width: 100%;
-    flex: 1 2;
-    text-align: center;
-    h4 {
-      text-transform: uppercase;
-      text-decoration: underline;
+    //    width: 48%;
+    margin: 0.80rem 1%;
+    padding: 0.75rem 1.25rem;
+    &:last-child {
+      flex: 1 2 100% !important;
     }
+  }
+  h4 {
+    font-family: $fontArvo;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  p {
+    font-family: fantasy;
   }
 }
